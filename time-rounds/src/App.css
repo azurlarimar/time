@@ -1,0 +1,488 @@
+:root {
+	--clock--size-width-height: 650px;
+	--countdown--font-size: 7.34vh;
+	--pie--color-set: #efeeee;
+	--controls--dark: #444;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	top: 0;
+	left: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.clock-page-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+}
+
+/* Clock */
+
+.clock-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.clock-wrapper {
+	position: relative;
+	width: var(--clock--size-width-height);
+	height: var(--clock--size-width-height);
+	border-radius: 50%;
+}
+
+/* Mark lines */
+
+/* 24 hour format */
+
+.mark-line {
+	position: absolute;
+	width: 4px;
+	height: 60px;
+	background-color: var(--controls--dark);
+}
+
+.mark-line-24 {
+	top: 0;
+	left: 50%;
+	transform: translate3d(-50%, 0, 0);
+}
+
+.mark-line-1 {
+	left: 50%;
+	transform: rotate(15deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-2 {
+	left: 50%;
+	transform: rotate(30deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-3 {
+	left: 50%;
+	transform: rotate(45deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-4 {
+	left: 50%;
+	transform: rotate(60deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-5 {
+	left: 50%;
+	transform: rotate(75deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-6 {
+	top: 50%;
+	left: calc(100% - 30px);
+	transform: translate3d(-50%, -50%, 0) rotate(90deg);
+}
+
+.mark-line-7 {
+	left: 50%;
+	transform: rotate(105deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-8 {
+	left: 50%;
+	transform: rotate(120deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-9 {
+	left: 50%;
+	transform: rotate(135deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-10 {
+	left: 50%;
+	transform: rotate(150deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-11 {
+	left: 50%;
+	transform: rotate(165deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-12 {
+	top: calc(100% - 30px);
+	left: 50%;
+	transform: translate3d(-50%, -50%, 0);
+}
+
+.mark-line-13 {
+	left: 50%;
+	transform: rotate(195deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-14 {
+	left: 50%;
+	transform: rotate(210deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-15 {
+	left: 50%;
+	transform: rotate(225deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-16 {
+	left: 50%;
+	transform: rotate(240deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-17 {
+	left: 50%;
+	transform: rotate(255deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-18 {
+	top: 50%;
+	left: calc(0% + 30px);
+	transform: translate3d(-50%, -50%, 0) rotate(90deg);
+}
+
+.mark-line-19 {
+	left: 50%;
+	transform: rotate(285deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-20 {
+	left: 50%;
+	transform: rotate(300deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-21 {
+	left: 50%;
+	transform: rotate(315deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-22 {
+	left: 50%;
+	transform: rotate(330deg);
+	transform-origin: center 325px;
+}
+
+.mark-line-23 {
+	left: 50%;
+	transform: rotate(345deg);
+	transform-origin: center 325px;
+}
+
+
+/* 12 hour format */
+
+.f-12--mark-line-1 {
+	left: 50%;
+	transform: rotate(30deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-2 {
+	left: 50%;
+	transform: rotate(60deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-3 {
+	left: calc(50% - 7px);
+	transform: rotate(90deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-4 {
+	left: 50%;
+	transform: rotate(120deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-5 {
+	left: 50%;
+	transform: rotate(150deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-6 {
+	left: calc(50% - 7px);
+	transform: rotate(180deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-7 {
+	left: 50%;
+	transform: rotate(210deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-8 {
+	left: 50%;
+	transform: rotate(240deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-9 {
+	left: calc(50% - 7px);
+	transform: rotate(270deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-10 {
+	left: 50%;
+	transform: rotate(300deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-11 {
+	left: 50%;
+	transform: rotate(330deg);
+	transform-origin: center 325px;
+}
+
+.f-12--mark-line-12 {
+	left: calc(50% - 7px);
+	transform: rotate(360deg);
+	transform-origin: center 325px;
+}
+
+.bold {
+	width: 15px;
+	height: 60px;
+}
+
+
+
+/* Clock hands */
+
+.minute-hand {
+	position: absolute;
+	top: 30px;
+	left: calc(50% - 7.5px);
+	width: 15px;
+	height: 295px;
+	background-color: #aaa;
+	transform: translate3d(-50%, 0, 0);
+	transform-origin: 50% bottom;
+}
+
+.hour-hand {
+	position: absolute;
+	top: 90px;
+	left: calc(50% - 7.5px);
+	width: 15px;
+	height: 235px;
+	background-color: var(--controls--dark);
+	transform: translate3d(-50%, 0, 0);
+	transform-origin: 50% bottom;
+}
+
+.dot {
+	position: absolute;
+	top: 50%;
+	left: calc(50% - 7.5px);
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: var(--controls--dark);
+	transform: translate3d(0, -50%, 0);
+}
+
+/* Countdown timer */
+
+.countdown-container {
+	position: absolute;
+	bottom: 10vh;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: auto;
+}
+
+.countdown-wrapper {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: inherit;
+}
+
+.timer-splitter {
+	position: relative;
+	top: -2px;
+	font-size: var(--countdown--font-size);
+	color: var(--controls--dark);
+}
+
+.timer-input {
+	font-size: var(--countdown--font-size);
+	min-width: 2ch;
+	width: fit-content;
+	padding: 0;
+	background-color: var(--controls--dark);
+	color: white;
+	outline: none;
+	border: none;
+	text-align: center;
+}
+
+.timer-input:disabled::selection {
+	cursor: default;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+.btn-timer-control {
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0 10px;
+	height: 8vh;
+}
+
+.btn-timer-control img {
+	height: 100%;
+}
+
+.btn-timer-control img {
+	filter: opacity(0.7);
+	/* filter: invert(9%) sepia(99%) saturate(5630%) hue-rotate(246deg) brightness(111%) contrast(148%) */
+}
+
+.btn-timer-control img:hover {
+	filter: opacity(1);
+}
+
+.btn-timer-control img.img-play {
+	/* filter: invert(9%) sepia(99%) saturate(5630%) hue-rotate(246deg) brightness(111%) contrast(148%) */
+}
+
+.btn-timer-control im.img-pause {
+	/* filter: invert(9%) sepia(99%) saturate(5630%) hue-rotate(246deg) brightness(111%) contrast(148%) */
+}
+
+.btn-timer-control img.img-stop {
+	/* filter: invert(9%) sepia(99%) saturate(5630%) hue-rotate(320deg) brightness(111%) contrast(148%) */
+}
+
+.timer-icon {
+	width: var(--countdown--font-size);
+}
+
+.plus {
+	background-color: #0000ff;
+}
+
+.minus {
+	background-color: #ff0000;
+}
+
+/* Time format switcher */
+
+.time-format-wrapper {
+	z-index: 250;
+}
+
+.btn-time-format {
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	font-size: 5vh;
+	color: #aaa;
+}
+
+/* Title control */
+
+.top-panel-container {
+	display: flex;
+	position: absolute;
+	top: 0;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	width: 95%;
+	height: 10%;
+}
+
+.btn-theme-switcher {
+	text-align: end;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	padding: 0;
+	width: 4.1rem;
+	font-size: 5vh;
+	color: #aaa;
+}
+
+.btn-theme-switcher:hover {
+	color: #ff0000;
+}
+
+.title-control {
+	position: absolute;
+	width: calc(100% - 20rem);
+	margin: 0 10rem;
+	color: var(--controls--dark);
+	font-size: 4vh;
+	background: #fff;
+	z-index: 250;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	padding: 0;
+}
+
+.title-plus {
+	color: #0000ff;
+}
+
+.title-minus {
+	color: #ff0000;
+}
+
+.title-control:focus {
+	border: 2px solid black;
+}
