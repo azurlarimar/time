@@ -1,0 +1,207 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+	margin: 8px;
+	padding: 0;
+	height: 100vh;
+	color: #333;
+	font-size: 3rem;
+}
+
+.card-container {
+	margin: 0 auto;
+	padding: 0em 1em;
+}
+
+.top-panel-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.34rem 0 4rem;
+}
+
+.prog-h1 {
+	margin: 0;
+}
+
+.top-panel-btn {
+	cursor: pointer;
+}
+
+.btn-list-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.move-btn-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 2rem;
+}
+
+.period-name {
+	font-weight: bold;
+	/* margin-right: 10px; */
+}
+
+.total-period {
+	font-weight: normal;
+}
+
+.percent {
+	/* font-size: 90%; */
+}
+
+.progress-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.period-container {
+	height: 4em;
+	display: flex;
+	flex-direction: column;
+}
+
+.period-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.left-period-wrapper {
+	display: flex;
+	flex-direction: row;
+	margin-right: 10px;
+}
+
+.right-period-wrapper {
+	text-align: right;
+}
+
+/* https: //nikitahl.com/progress-bar-css */
+/* https: //stackoverflow.com/a/46572990/1347601 */
+
+progress {
+	width: 100%;
+	position: relative;
+	height: 16px;
+}
+
+progress::before,
+progress::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+
+progress::before {
+	width: 100%;
+	background: #e0e0e0;
+}
+
+progress::after {
+	width: var(--progress-lifetime--value);
+	background: #4285f4;
+}
+
+/* logo */
+.x.logo {
+	width: 95px;
+	height: auto;
+	margin-right: 0.5rem;
+}
+
+/* Query media - responsive design */
+@media (max-width: 1192px) {
+	.prog-h1 {
+		font-size: 2rem;
+	}
+
+	.period-name {
+		font-size: 50%;
+	}
+
+	.total-period {
+		font-size: 50%;
+	}
+
+	.percent {
+		font-size: 50%;
+	}
+
+	.x.logo {
+		width: 32px;
+	}
+}
+
+@media (max-width: 724px) {
+
+	.period-name {
+		font-size: 40%;
+		margin-right: 5px;
+	}
+
+	.total-period {
+		font-size: 40%;
+	}
+
+	.percent {
+		font-size: 40%;
+		text-align: end;
+	}
+}
+
+@media (max-width: 600px) {
+
+	.period-name {
+		font-size: 32%;
+	}
+
+	.total-period {
+		font-size: 32%;
+	}
+
+	.percent {
+		font-size: 32%;
+	}
+}
+
+
+
+span.splitter.splitter-colon,
+span.value {
+	display: none;
+}
+
+span.splitter.splitter-slash,
+span.total-period {
+	font-size: 1rem;
+	margin-top: 7px;
+	display: none;
+}
+
+.detail {
+	font-size: 1rem;
+	text-align: right;
+	color: silver;
+}
+
+.value-readable {
+	color: silver;
+}

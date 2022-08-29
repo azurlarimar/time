@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>X Life / Time / Bars</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="card-container">
+      <div class="top-panel-wrapper">
+        <h1 class="prog-h1">
+          <a href="https://xlife.one"
+            ><img
+              class="x logo"
+              src="https://xlife.one/_plugins/mmx/logo/@2022.01.11-01_2019_Logotyp_02.svg?ac86ca50-cb05-412c-ba42-42ac26318d6a"
+          /></a>
+          <span>Time Bars</span>
+        </h1>
+
+        <div class="btn-list-wrapper">
+          <div class="move-btn-wrapper">
+            <button class="top-panel-btn btn-move-up" onclick="moveUp">
+              Up
+            </button>
+            <button class="top-panel-btn btn-move-down" onclick="moveDown">
+              Down
+            </button>
+          </div>
+          <button class="top-panel-btn btn-sort" onclick="sortTimeZooms">
+            Sort
+          </button>
+        </div>
+      </div>
+
+      <div class="progress-wrapper">
+        <div class="period-container" data-index="0">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-millennium" class="period-name"><span class="title">Millennium</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="millennium-value-readable" class="value-readable">2000-3000</span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="millennium-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="millennium-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-millennium" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="1">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-century" class="period-name"><span class="title">Century</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="century-value-readable" class="value-readable">0-100</span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="century-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="century-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-century" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="2">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-decade" class="period-name"><span class="title">Decade</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="decade-value-readable" class="value-readable">20-30</span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="decade-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="decade-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-decade" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="3">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-year" class="period-name"><span class="title">Year</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="year-value-readable" class="value-readable"></span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="year-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="year-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-year" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="4">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-quarter" class="period-name"><span class="title">Quarter</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="quarter-value-readable" class="value-readable"></span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="quarter-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="quarter-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-quarter" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="5">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-month" class="period-name"><span class="title">Month</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="month-value-readable" class="value-readable"></span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="month-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="month-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-month" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="6">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-week" class="period-name"><span class="title">Week</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="week-value-readable" class="value-readable"></span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="week-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="week-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-week" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="7">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-day" class="period-name"><span class="title">Day</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="day-value-readable" class="value-readable"></span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="day-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="day-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-day" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="8">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-hour" class="period-name"><span class="title">Hour</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="hour-value-readable" class="value-readable"></span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="hour-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="hour-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-hour" max="100"></progress>
+        </div>
+
+        <div class="period-container" data-index="9">
+          <div class="period-wrapper">
+            <div class="left-period-wrapper">
+              <span id="period-minute" class="period-name"><span class="title">Minute</span>
+            </div>
+            <div class="right-period-wrapper">
+              <span id="minute-value-readable" class="value-readable"></span>
+              <span class="splitter splitter-space">&nbsp;</span>
+              <span id="minute-value-percent" class="percent"></span>
+              <div class="detail">
+                <span id="minute-value"></span>
+              </div>
+            </div>
+          </div>
+          <progress id="progress-minute" max="100"></progress>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./scripts.js"></script>
+  </body>
+</html>
